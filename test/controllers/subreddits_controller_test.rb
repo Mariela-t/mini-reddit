@@ -17,7 +17,7 @@ class SubredditsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create subreddit" do
     assert_difference("Subreddit.count") do
-      post subreddits_url, params: { subreddit: { body: @subreddit.body, title: @subreddit.title, user_id: @subreddit.user_id } }
+      post subreddits_url, params: {subreddit: {body: @subreddit.body, title: @subreddit.title, user_id: @subreddit.user_id}}
     end
 
     assert_redirected_to subreddit_url(Subreddit.last)
@@ -34,7 +34,7 @@ class SubredditsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update subreddit" do
-    patch subreddit_url(@subreddit), params: { subreddit: { body: @subreddit.body, title: @subreddit.title, user_id: @subreddit.user_id } }
+    patch subreddit_url(@subreddit), params: {subreddit: {body: @subreddit.body, title: @subreddit.title, user_id: @subreddit.user_id}}
     assert_redirected_to subreddit_url(@subreddit)
   end
 
